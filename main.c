@@ -13,8 +13,8 @@ int main() {
   int x;
   scanf("%d", &x);
   if (isPrime(x)) {
-    printf("true");
+    printf("true\n");
   } else {
-    printf("false");
+    printf("false\n");
   }
 }
