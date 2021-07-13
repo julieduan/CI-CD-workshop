@@ -1,7 +1,7 @@
-name: Make sure my c program compiles
+name: Unit tests
 on: [push]
 jobs:
-  Try-to-compile:
+  Run-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -10,3 +10,5 @@ jobs:
         run:  sudo apt install build-essential libasan6
       - name: compile
         run:  gcc main.c
+      - name: run tests
+        run: ./test.sh
