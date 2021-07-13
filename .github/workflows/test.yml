@@ -1,0 +1,12 @@
+name: Make sure my c program compiles
+on: [push]
+jobs:
+  Try-to-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: install gcc and address santiniser
+        run:  Sudo apt install build-essential libasan6
+      - name: compile
+        run:  gcc main.c
