@@ -7,6 +7,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: install gcc and address santiniser
-        run:  Sudo apt install build-essential libasan6
+        run:  sudo apt install build-essential libasan6
       - name: compile
         run:  gcc main.c
